@@ -1,12 +1,13 @@
 import React from 'react';
+import {NavLinks} from "./ui/nav-links";
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
     return (
         <html lang="en">
-        <head>
-            <title>12343221</title>
-        </head>
-        <body>{children}</body>
+        <body>
+            <NavLinks />
+            {children}
+        </body>
         </html>
     )
 }
