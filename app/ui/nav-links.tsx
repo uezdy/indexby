@@ -16,7 +16,6 @@ export function NavLinks() {
                     .map((el: string, index: number, array: Array<string>) =>
                         <Link
                             key={index}
-                            style={{margin: '0 5px'}}
                             className={`link ${pathname === array.slice(0, index +1).join('/') ? 'active' : ''}`}
                             href={array.slice(0, index +1).join('/')}>{el}</Link>)
             }
