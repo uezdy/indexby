@@ -5,7 +5,7 @@ import Link from 'next/link'
 import '@/styles/styles.css'
 
 export function NavLinks() {
-    const pathname = usePathname()
+    const pathname = usePathname();
 
     return (
         <nav>
