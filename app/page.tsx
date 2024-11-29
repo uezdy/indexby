@@ -12,7 +12,7 @@ export default function Page() {
     return (
         <div>
             <h1>Hello World</h1>
-            <a href="/im">I'm</a>
+            <a href="/im">I&apos;m</a>
         </div>
     )
 }
