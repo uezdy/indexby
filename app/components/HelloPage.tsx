@@ -1,18 +1,18 @@
 'use client'
-import Button from "@mui/joy/Button";
-import Link from "next/link";
+// import Button from "@mui/joy/Button";
+// import Link from "next/link";
 import {css, styled} from "@mui/system";
 
-const HelloPage = ({setClickToAuth}: any) => {
+const HelloPage = () => {
     return <HelloPageWrapper>
         <div className="login-cmp">
-            <Button className="login-google-button" variant="plain" onClick={setClickToAuth}>Вход через Google</Button>
+            {/*<Button className="login-google-button" variant="plain">Вход через Google</Button>*/}
             <div className="book-title">Метрическаѧ кни́га</div>
             <div className="book-description">​длѧ​ записи ​родившихсѧ​, ​бракомъ​ сочета́вшихсѧ ​и҆​ ᲂу҆ме́ршихъ</div>
         </div>
         <div className="login-cmp">
-            <Link className="link-to" href="/metrics/map">Карта результатов</Link>
-            <Link className="link-to" href="https://telegra.ph/MK-11-18-5">Список результатов</Link>
+            {/*<Link className="link-to" href="/metrics/map">Карта результатов</Link>*/}
+            {/*<Link className="link-to" href="https://telegra.ph/MK-11-18-5">Список результатов</Link>*/}
         </div>
     </HelloPageWrapper>
 };
