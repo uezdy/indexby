@@ -87,7 +87,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: './out'
-          destination-github-username: 'shappoff'
+          destination-github-username: 'uezdy'
           destination-repository-name: 'uezdy.github.io'
           user-email: shappoff@gmail.com
           target-branch: uezdy
