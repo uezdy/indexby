@@ -11,7 +11,7 @@ const HelloPage = ({setClickToAuth}: any) => {
             <div className="book-description">​длѧ​ записи ​родившихсѧ​, ​бракомъ​ сочета́вшихсѧ ​и҆​ ᲂу҆ме́ршихъ</div>
         </div>
         <div className="login-cmp">
-            <Link className="link-to" href={`${location.pathname}/map`}>Карта результатов</Link>
+            <Link className="link-to" href="/metrics/map">Карта результатов</Link>
             <Link className="link-to" href="https://telegra.ph/MK-11-18-5">Список результатов</Link>
         </div>
     </HelloPageWrapper>
