@@ -2,7 +2,9 @@ import HelloPage from "@/components/HelloPage";
 import localFont from 'next/font/local';
 
 // Font files can be colocated inside of `pages`
-const myFont = localFont({ src: './MonomakhUnicode.otf' })
+const monomakh = localFont({ src: './MonomakhUnicode.otf',
+    variable: '--monomakh-unicode'
+})
 
 
 export const metadata =  {
@@ -12,6 +14,6 @@ export const metadata =  {
 }
 export default function Metrics() {
     return <>
-        <HelloPage className={myFont.className} />
+        <HelloPage className={monomakh.variable} />
     </>
 }
