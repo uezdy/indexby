@@ -30,7 +30,7 @@ const HelloPageWrapper = styled('div')(
         }
         .book-title,
         .book-description {
-          font-family: var(--monomakh-unicode, 'Monomakh Unicode');
+          font-family: var(--monomakh-unicode);
           margin: auto;
         }
         .book-title {
