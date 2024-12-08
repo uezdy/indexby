@@ -2,7 +2,7 @@ import HelloPage from "@/components/HelloPage";
 import localFont from 'next/font/local';
 
 // Font files can be colocated inside of `pages`
-export const monomakh = localFont({
+const monomakh = localFont({
     src: './MonomakhUnicode.otf',
     variable: '--monomakh-unicode'
 })
