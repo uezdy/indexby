@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 
 // Font files can be colocated inside of `pages`
 const monomakh = localFont({
+    fallback: ['Monomakh Unicode'],
     src: './MonomakhUnicode.otf',
     variable: '--monomakh-unicode'
 })
