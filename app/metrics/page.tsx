@@ -13,7 +13,7 @@ export const metadata =  {
 
 }
 export default function Metrics() {
-    return <>
-        <HelloPage className={monomakh.variable} />
-    </>
+    return <div className={monomakh.variable}>
+        <HelloPage />
+    </div>
 }
