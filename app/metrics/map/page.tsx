@@ -1,5 +1,8 @@
+'use client'
+import {LeafletInfoMap} from "@/components/LeafletInfoMap";
+
 export default function MapMetrics() {
     return <>
-        <h1>Map Metrics</h1>
+        <LeafletInfoMap />
     </>
 }
