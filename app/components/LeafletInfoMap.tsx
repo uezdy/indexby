@@ -147,8 +147,8 @@ export const LeafletInfoMap: React.FC<any> = () => {
                 }) : <></>
             }
             {
-                currentType === 'ch' && noMK ? notSavedPrikhods.map((hit: any) => {
-                    return <PrikhodEmptyMarker key={hit.short} hit={hit}/>
+                currentType === 'ch' && noMK ? notSavedPrikhods.map((hit: any, index: number) => {
+                    return <PrikhodEmptyMarker key={index} hit={hit}/>
                 }) : <></>
             }
             <MarkerClusterGroup chunkedLoading>

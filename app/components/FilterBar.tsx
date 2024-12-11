@@ -8,6 +8,7 @@ import IconButton from '@mui/joy/IconButton';
 import CloseRounded from '@mui/icons-material/CloseRounded';
 import Switch from "@mui/joy/Switch";
 import Typography from "@mui/joy/Typography";
+import {css, styled} from "@mui/system";
 
 export default function FilterBar({type, church, callBack, noMK}: any) {
     const [currentType, setCurrentType] = type;
@@ -17,7 +18,7 @@ export default function FilterBar({type, church, callBack, noMK}: any) {
         callBack && callBack();
     };
 
-    return <>
+    return <FilterBarWrapper>
         <div className="filter-bar-main-wrapper">
             <ToggleButtonGroup
                 size="small"
@@ -86,6 +87,33 @@ export default function FilterBar({type, church, callBack, noMK}: any) {
             }
 
         </div>
-    </>
+    </FilterBarWrapper>
 };
+
+const FilterBarWrapper = styled('div')(
+    ({theme}) => css`
+      & .filter-bar-main-wrapper {
+        display: flex;
+
+        .login-google-button {
+          margin: 30px 20px;
+        }
+        .book-title,
+        .book-description {
+          font-family: 'Monomakh Unicode';
+          margin: auto;
+        }
+        .book-title {
+          font-size: 27pt;
+        }
+        .book-description {
+          margin: 20vh 4vw;
+        }
+        .link-to {
+          margin: 10px 0;
+        }
+      }
+
+    `,
+);
 
