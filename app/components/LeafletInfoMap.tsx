@@ -5,6 +5,7 @@ import {getDatabase, ref, child, get} from "firebase/database";
 import {
     MapContainer,
 } from "react-leaflet";
+
 import "leaflet/dist/leaflet.css";
 import MarkerClusterGroup from 'react-leaflet-cluster';
 
@@ -67,7 +68,7 @@ const getValues = async (path: string, callback: Function) => {
     }
 };
 
-export const LeafletInfoMap: React.FC<any> = () => {
+const LeafletInfoMap: React.FC<any> = () => {
     const [open, setOpen] = React.useState<boolean | any>(false);
     const [currentType, setCurrentType] = React.useState<string>('ch');
     const [noMK, setNoMK] = React.useState<boolean>();
@@ -152,7 +153,7 @@ export const LeafletInfoMap: React.FC<any> = () => {
                 }) : <></>
             }
             <MarkerClusterGroup chunkedLoading>
-                {
+        {
                     currentType === 'np' ?
                         hitsNP
                             .filter((hit: any) => {
@@ -169,7 +170,7 @@ export const LeafletInfoMap: React.FC<any> = () => {
                 }
             </MarkerClusterGroup>
 
-        </MapContainer>
+                </MapContainer>
 
         <Modal
             key={2}
@@ -223,3 +224,5 @@ const ModalContent = styled('div')(
 
     `,
 );
+
+export default LeafletInfoMap;
