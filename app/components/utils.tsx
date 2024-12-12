@@ -52,3 +52,5 @@ export function copyToClipboard(data: string) {
         console.error('Failed to copy: ', err);
     }
 }
+
+export const canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
