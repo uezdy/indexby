@@ -22,7 +22,7 @@ const PlaceMarker = ({hit}: any) => {
             <b>Упоминается в церквях:</b>
             <ol className="place-marker-popup">
                 {
-                    hit.info.map(({title, count}: any) => <li>{title} ({count} {plural(count, ['раз', 'раза', 'раз'])})</li>)
+                    hit.info.map(({title, count}: any, ind: number) => <li key={ind}>{title} ({count} {plural(count, ['раз', 'раза', 'раз'])})</li>)
                 }
             </ol>
         </Popup>

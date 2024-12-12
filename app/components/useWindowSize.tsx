@@ -20,7 +20,7 @@ export const useWindowSize = (ms: number = 200) => {
         window.addEventListener("resize", throttledHandleResize);
         handleResize();
         return () => window.removeEventListener("resize", throttledHandleResize);
-    }, []);
+    }, [ms]);
 
     return windowSize;
 };
