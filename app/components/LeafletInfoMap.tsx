@@ -153,7 +153,7 @@ const LeafletInfoMap: React.FC<any> = () => {
                 }) : <></>
             }
             <MarkerClusterGroup chunkedLoading>
-        {
+                {
                     currentType === 'np' ?
                         hitsNP
                             .filter((hit: any) => {
@@ -169,9 +169,7 @@ const LeafletInfoMap: React.FC<any> = () => {
                         : <></>
                 }
             </MarkerClusterGroup>
-
-                </MapContainer>
-
+        </MapContainer>
         <Modal
             key={2}
             aria-labelledby="unstyled-modal-title"
