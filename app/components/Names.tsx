@@ -43,7 +43,13 @@ const Names = () => {
             <Tab label="Мужские" value="m" />
             <Tab label="Женские" value="f" />
         </Tabs>
-        <Input autoFocus onChange={searchHandler} type="text" value={value} id="input" />
+        <Input autoFocus
+               onChange={searchHandler}
+               placeholder="Имя"
+               type="text"
+               value={value}
+               id="input"
+        />
 
         {
             hits.length ? <Table sx={{ minWidth: 650 }} aria-label="result table">
