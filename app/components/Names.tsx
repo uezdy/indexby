@@ -10,24 +10,16 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import nameArray from "../api/names/names";
 
 const Names = () => {
     const [value, setValue] = React.useState<string>('');
     const [currentSex, setCurrentSex] = React.useState<'m' | 'f'>('m');
     const [hits, setHits] = React.useState<Array<any>>([]);
-    const [nameArray, setNameArray] = React.useState<Array<any>>([]);
 
     const handleChange = (event: React.SyntheticEvent, value: 'm' | 'f') => {
         setCurrentSex(value);
     };
-
-    React.useEffect(() => {
-        fetch('/api/names')
-            .then((r) => r.json())
-            .then((json: Array<any>) => {
-                setNameArray(json);
-            });
-    }, []);
 
     React.useEffect(() => {
         if (value.length) {
