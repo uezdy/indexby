@@ -2,8 +2,15 @@
   "compilerOptions": {
     "baseUrl": "app/",
     "paths": {
-      "@/styles/*": ["styles/*"],
-      "@/components/*": ["components/*"]
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/api/*": [
+        "api/*"
+      ]
     },
     "target": "ES2017",
     "lib": [
