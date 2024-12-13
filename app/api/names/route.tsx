@@ -1,4 +1,4 @@
-import names from './names.json';
+import names from './names';
 
 export const dynamic = 'force-static';
 

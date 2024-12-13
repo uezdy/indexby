@@ -1,4 +1,4 @@
-[
+const names = [
   {
     "pl": "Aaron",
     "ru": "Аарон",
@@ -18746,4 +18746,6 @@
       "ort"
     ]
   }
-]
+];
+
+export default names;
