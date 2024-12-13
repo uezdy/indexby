@@ -1,4 +1,4 @@
-const names = [
+const names: any = [
   {
     "pl": "Aaron",
     "ru": "Аарон",
