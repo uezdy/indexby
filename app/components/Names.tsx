@@ -4,22 +4,31 @@ import React from 'react';
 import {css, styled} from "@mui/system";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Input from '@mui/material/Input';
+import Input from '@mui/joy/Input';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import nameArray from "@/api/names/names";
+import Typography from '@mui/joy/Typography';
 
 const Names = () => {
     const [value, setValue] = React.useState<string>('');
     const [currentSex, setCurrentSex] = React.useState<'m' | 'f'>('m');
     const [hits, setHits] = React.useState<Array<any>>([]);
+    const [nameArray, setNameArray] = React.useState<Array<any>>([]);
 
     const handleChange = (event: React.SyntheticEvent, value: 'm' | 'f') => {
         setCurrentSex(value);
     };
+
+    React.useEffect(() => {
+        fetch('/names.json')
+            .then((r) => r.json())
+            .then((json: Array<any>) => {
+                setNameArray(json);
+            });
+    }, []);
 
     React.useEffect(() => {
         if (value.length) {
@@ -46,9 +55,7 @@ const Names = () => {
         <Input autoFocus
                onChange={searchHandler}
                placeholder="Имя"
-               type="text"
                value={value}
-               id="input"
         />
 
         {
@@ -76,8 +83,8 @@ const Names = () => {
                         }
                     </TableBody>
                 </Table>
-                : <div>
-                    <p>
+                : <div className="p-description">
+                    <Typography level="body-sm">
                         Если буква(буквы) в имени неразборчива, то просто вводите точку(точки) вместо ее<br/>
                         <code>Никол.й</code><br/>
                         <code>Вла.им.р</code><br/><br/>
@@ -89,7 +96,7 @@ const Names = () => {
 
                         Если неизвестна первая буква, то начинайте c сивола <code>^</code> и точки<br/>
                         <code>^.имитрий</code><br/>
-                    </p>
+                    </Typography>
 
                 </div>
         }
@@ -127,12 +134,12 @@ const getIcon = (type: string) => {
 
 const NamesWrapper = styled('div')(
     ({theme}) => css`
-      padding: 5px;
-      margin: 10px;
+      & > div {
+        margin: 10px;
+      }
       
       & p {
-        margin-top: 0;
-        margin-bottom: 1rem;
+        margin: 15px 0;
       }
     `,
 );
