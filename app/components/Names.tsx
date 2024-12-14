@@ -23,7 +23,7 @@ const Names = () => {
     };
 
     React.useEffect(() => {
-        fetch('/names.json')
+        fetch('https://raw.githubusercontent.com/uezdy/uezdy.github.io/refs/heads/uezdy/names.json')
             .then((r) => r.json())
             .then((json: Array<any>) => {
                 setNameArray(json);
