@@ -1,19 +1,23 @@
 import React from 'react';
-import {NavLinks} from "./ui/nav-links";
+
+export const metadata =  {
+    title: 'Проект индексации',
+    description: `Проект индексации архивных документов Беларуси: Метрических книг, Ревизских сказок, Исповедных ведомостей, переписей населения и других списков`,
+    other: {
+        robots: "index, follow",
+        viewport: "width=device-width, initial-scale=1"
+    },
+}
+
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="ru">
         <head>
             <meta charSet="UTF-8"></meta>
-            <meta name="robots" content="index, follow"></meta>
-            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-            
-            <title></title>
         </head>
         <body style={{margin: '0'}}>
-        {/*<NavLinks />*/}
-        {children}
+            {children}
         </body>
         </html>
     )
