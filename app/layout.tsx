@@ -16,7 +16,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <head>
             <meta charSet="UTF-8"></meta>
         </head>
-        <body style={{margin: '0'}}>
+        <body>
             {children}
         </body>
         </html>

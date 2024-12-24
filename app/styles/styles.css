@@ -1,11 +1,6 @@
-.link {
-    text-decoration: none;
+body {
+    margin: 0;
+}
 
-}
-.link.active {
-    color: red;
-}
-nav a.link:not(:first-child):not(.active):after {
-    content: '→';
-    margin: 0 5px;
+.main-nav-menu {
 }
