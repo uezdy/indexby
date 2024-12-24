@@ -23,7 +23,7 @@ const Names = () => {
     };
 
     React.useEffect(() => {
-        fetch('https://raw.githubusercontent.com/uezdy/uezdy.github.io/refs/heads/uezdy/names.json', {cache:"no-store"})
+        fetch('/names.json', {cache:"no-store"})
             .then((r) => r.json())
             .then((json: Array<any>) => {
                 setNameArray(json);
