@@ -1,4 +1,5 @@
 module.exports = {
     output: 'export',
-    distDir: 'out'
+    distDir: 'out',
+    basePath: '/indexby',
 }
